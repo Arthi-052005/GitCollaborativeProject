@@ -97,9 +97,11 @@
         main {
             flex-grow: 1;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 4rem 2rem;
+            gap: 2rem;
         }
 
         .hero {
@@ -208,6 +210,46 @@
             line-height: 1.5;
         }
 
+        /* About Section styles added on feature/about-page branch by Developer 2 */
+        .about-section {
+            max-width: 800px;
+            text-align: center;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 3rem 2.5rem;
+            border-radius: 24px;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            width: 100%;
+        }
+
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--secondary-accent), transparent);
+        }
+
+        .about-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-accent);
+        }
+
+        .about-section p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
         footer {
             border-top: 1px solid var(--border-color);
             padding: 1.5rem 2rem;
@@ -266,6 +308,14 @@
                     <p>Push and pull your changes to keep your local workspace synchronized with GitHub.</p>
                 </div>
             </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <h2>About Our Collaboration</h2>
+            <p>
+                This project represents a simulated environment where multiple developers contribute to the same codebase. Through branch protection rules, clear pull requests, and detailed code reviews, teams can deploy features quickly and maintain high-quality standards.
+            </p>
         </section>
     </main>
 
