@@ -171,6 +171,43 @@
             filter: brightness(1.1);
         }
 
+        /* Features Section styles added on feature/home-page branch */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+            text-align: left;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 16px;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-accent);
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
         footer {
             border-top: 1px solid var(--border-color);
             padding: 1.5rem 2rem;
@@ -213,6 +250,22 @@
                 Welcome to our collaborative web environment. This page serves as a live demonstration of version control practices, branching, code reviews, and remote repository synchronization.
             </p>
             <a href="https://github.com/Arthi-052005/GitCollaborativeProject" target="_blank" class="btn">View on GitHub</a>
+
+            <!-- Features Grid Section -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Branching & Merging</h3>
+                    <p>Create isolated environments to develop features and merge changes safely.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Code Collaboration</h3>
+                    <p>Use Pull Requests and reviews to ensure code quality and team alignment.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Remote Sync</h3>
+                    <p>Push and pull your changes to keep your local workspace synchronized with GitHub.</p>
+                </div>
+            </div>
         </section>
     </main>
 
